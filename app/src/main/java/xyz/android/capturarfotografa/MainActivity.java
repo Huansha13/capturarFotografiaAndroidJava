@@ -5,7 +5,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
-import android.Manifest;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -74,8 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void capturePhoto(View view) {
         // Revisar si el permiso para acceder a la cámara está otorgado
-        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
 
             // Si no se ha otorgado el permiso, solicitarlo al usuario
             ActivityCompat.requestPermissions(this,
